@@ -5,7 +5,6 @@ window.addEventListener('load', () => {
 function fetchUsers() {
   fetch('https://whatsapp-random-web.herokuapp.com/', {
     method: 'POST',
-    mode: 'no-cors',
   })
     .then(function (response) {
       if (response.status == 404) {
