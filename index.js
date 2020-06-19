@@ -45,6 +45,11 @@ app.post('/', async (req, res) => {
 
     newLink = JSON.stringify(newJson);
 
+    res.set({
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true,
+    });
+
     res.send(newLink);
   } catch (err) {
     res.status(400).send({ error: err.message });
