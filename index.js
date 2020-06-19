@@ -2,7 +2,6 @@ const express = require('express');
 const fs = require('fs').promises;
 const cors = require('cors');
 const app = express();
-let teste = 1;
 
 global.usersFileName = 'users.json';
 global.logsFileName = 'logs.json';
