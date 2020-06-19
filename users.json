@@ -1,0 +1,8 @@
+{
+  "nextId": 4,
+  "users": [
+    { "id": 1, "name": "Talita", "phone": 4933010071 },
+    { "id": 2, "name": "Gabriela", "phone": 4321 },
+    { "id": 3, "name": "Iara", "phone": 5555 }
+  ]
+}
