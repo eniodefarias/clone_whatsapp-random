@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs').promises;
 const cors = require('cors');
 const app = express();
+var porta = process.env.PORT || 8080;
 
 global.usersFileName = 'users.json';
 global.logsFileName = 'logs.json';
@@ -62,7 +63,7 @@ app.get('/', async (_, res) => {
   }
 });
 
-app.listen(3000, async () => {
+app.listen(porta, async () => {
   try {
     await fs.readFile(global.usersFileName, 'utf8');
     console.log('Api Started!');
