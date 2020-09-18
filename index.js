@@ -10,7 +10,7 @@ global.logsFileName = 'logs.json';
 app.use(express.json());
 app.use(cors());
 
-app.post('/', async (req, res) => {
+app.get('/', async (req, res) => {
   try {
     //load users data from json
     let dataUser = await fs.readFile(global.usersFileName, 'utf8');
@@ -56,7 +56,7 @@ app.post('/', async (req, res) => {
   }
 });
 
-app.get('/', async (_, res) => {
+app.get('/users', async (_, res) => {
   try {
     let data = await fs.readFile(global.usersFileName, 'utf8');
     let json = JSON.parse(data);
