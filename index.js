@@ -10,7 +10,7 @@ global.logsFileName = 'logs.json';
 app.use(express.json());
 app.use(cors());
 
-app.get('/', async (req, res) => {
+app.post('/', async (req, res) => {
   try {
     //load users data from json
     let dataUser = await fs.readFile(global.usersFileName, 'utf8');
@@ -50,13 +50,13 @@ app.get('/', async (req, res) => {
       'Access-Control-Allow-Credentials': true,
     });
 
-    res.send(window.location.href = newUrl);
+    res.send(newLink);
   } catch (err) {
     res.status(400).send({ error: err.message });
   }
 });
 
-app.get('/users', async (_, res) => {
+app.get('/', async (_, res) => {
   try {
     let data = await fs.readFile(global.usersFileName, 'utf8');
     let json = JSON.parse(data);
