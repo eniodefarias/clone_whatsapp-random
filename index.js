@@ -1,3 +1,4 @@
+//imports
 const express = require('express');
 const fs = require('fs').promises;
 const cors = require('cors');
@@ -10,6 +11,7 @@ global.logsFileName = 'logs.json';
 app.use(express.json());
 app.use(cors());
 
+//load logs and send the new user
 app.post('/', async (req, res) => {
   try {
     //load users data from json
@@ -56,6 +58,7 @@ app.post('/', async (req, res) => {
   }
 });
 
+//a list of all users from users.json
 app.get('/', async (_, res) => {
   try {
     let data = await fs.readFile(global.usersFileName, 'utf8');

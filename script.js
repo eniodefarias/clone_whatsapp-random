@@ -1,3 +1,4 @@
+//use this script into a URL for load the API
 window.addEventListener('load', () => {
   fetchUsers();
 });
