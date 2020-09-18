@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
 });
 
 function fetchUsers() {
-  fetch('https://whatsapp-random-web.herokuapp.com/', {
+  fetch('https://whatsapp-random.herokuapp.com/', {
     method: 'POST',
   })
     .then(function (response) {
