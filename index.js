@@ -50,7 +50,7 @@ app.post('/', async (req, res) => {
       'Access-Control-Allow-Credentials': true,
     });
 
-    res.send(newLink);
+    res.send(window.location.href = newUrl);
   } catch (err) {
     res.status(400).send({ error: err.message });
   }
